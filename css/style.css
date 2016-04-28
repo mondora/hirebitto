@@ -392,10 +392,12 @@ body{
 		min-height: auto;
 	}
 	.rules h2 {
-		font-size: 44px;
+		font-size: 40px;
+		line-height: 40px;
 	}
 	.rules h3 {
 		font-size: 30px;
+		line-height: 30px;
 	}
 	.rules p{
 		font-size: 16px;
@@ -1039,13 +1041,16 @@ body{
 	background:#1c1c1c;
 }
 @media screen and (max-width: 767px){
+	.soc ul{
+		margin: 0px;
+	}
 	.soc ul li{
-		margin-right: 10px;
+		margin: 0px 4px;
 	}
 	.soc ul li a {
-		width: 48px;
-		height: 48px;
-		line-height: 54px;
+		width: 45px;
+		height: 45px;
+		line-height: 50px;
 	}
 }
 /**/
