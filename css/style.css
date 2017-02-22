@@ -466,14 +466,16 @@ body{
 	.video hr {
 		display: block;
 	}
+	.video .info-wrp {
+		height: 180px;
+		margin-bottom: 30px;
+	}
 }
 @media screen and (min-width: 767px) {
 	.video hr {
 		display: none;
-		minHeight: 170px;
-		margin-bottom: 30;
 	}
-	.video  .info-wrp {
+	.video .info-wrp {
 		height: auto;
 	}
 }
