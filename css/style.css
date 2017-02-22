@@ -467,8 +467,8 @@ body{
 		display: block;
 	}
 	.video .info-wrp {
-		height: 180px;
-		margin-bottom: 30px;
+		height: auto;
+		margin-bottom: 20px;
 	}
 }
 @media screen and (min-width: 767px) {
@@ -476,7 +476,8 @@ body{
 		display: none;
 	}
 	.video .info-wrp {
-		height: auto;
+		height: 170px;
+		margin-bottom: 30px;
 	}
 }
 /*-----------------------------------------------------------------------------------*/
