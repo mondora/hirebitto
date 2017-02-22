@@ -470,6 +470,11 @@ body{
 @media screen and (min-width: 767px) {
 	.video hr {
 		display: none;
+		minHeight: 170px;
+		margin-bottom: 30;
+	}
+	.video  .info-wrp {
+		height: auto;
 	}
 }
 /*-----------------------------------------------------------------------------------*/
