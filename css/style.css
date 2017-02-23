@@ -461,7 +461,7 @@ body{
 	margin-bottom: 20px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 992px) {
 	.video {
 		text-align: center;
 	}
@@ -476,13 +476,13 @@ body{
 		margin-bottom: 20px;
 	}
 }
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 992px) {
 	.video hr {
 		display: none;
 	}
 	.video .info-wrp {
 		overflow: hidden;
-		height: 170px;
+		height: 160px;
 		margin-bottom: 30px;
 	}
 }
@@ -490,6 +490,7 @@ body{
 /*	PROJECTS
 /*-----------------------------------------------------------------------------------*/
 .line3{
+	top: -50px !important;
 	position: relative;
 	width: 100%;
 	overflow: hidden;
