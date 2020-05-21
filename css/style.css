@@ -295,14 +295,14 @@ body{
 /*-----------------------------------------------------------------------------------*/
 /*	RULES
 /*-----------------------------------------------------------------------------------*/
-.line2{
+.rules.line2{
 	position: relative;
 	width: 100%;
 	overflow: hidden;
 	height:100%;
 	background-color: #FEDA17;
 }
-.line2:after{
+.rules.line2:after{
 	content: "";
 	position: absolute;
 	z-index: 1;
@@ -313,7 +313,7 @@ body{
 	border-bottom: 150px solid white;
 	border-left: 3000px solid transparent;
 }
-.line2:before{
+.rules.line2:before{
 	top: 0;
 	display: block;
 	content: "";
@@ -489,30 +489,78 @@ body{
 /*-----------------------------------------------------------------------------------*/
 /*	AUCTIONS
 /*-----------------------------------------------------------------------------------*/
+.auctions.line2{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	height:100%;
+	background-color: #FEDA17;
+}
+.auctions.line2:after{
+	content: "";
+	position: absolute;
+	z-index: 1;
+	pointer-events: none;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border-bottom: 150px solid white;
+	border-left: 3000px solid transparent;
+}
+.auctions.line2:before{
+	top: 0;
+	display: block;
+	content: "";
+	position: absolute;
+	z-index: 1;
+	pointer-events: none;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	border-top: 190px solid white;
+	border-right: 3000px solid transparent;
+}
+
 .auctions{
 	margin-bottom: 145px;
 	color: #fff;
-	margin-top: 200px;
+	margin-top: 150px;
 	text-align: center;
 }
 .auctions > div {
 	min-height: auto;
 	margin-top: 30px;
+	margin-bottom: 30px;
 }
+
 .auctions h1 {
 	position: absolute;
-    top: -48px;
+    top: -38px;
     border: 3px solid #ffffff;
     border-radius: 50px;
     width: 300px;
-    height: 50px;
+    height: 42px;
     line-height: 1.50;
-    font-size: 30px;
+    font-size: 24px;
     color: #fff;
     background-color: #FEDA17;
     text-align: center;
     font-family: 'Roboto', 'sans-serif';
     margin-left: 25px;
+}
+
+.auctions h2 {
+	width: auto;
+	height: 100px;
+	line-height: 80px;
+	font-size: 64px;
+	color: #fff;
+	margin: 0;
+	font-family: 'Cabin Sketch', cursive;
 }
 
 .auctions .card {
@@ -521,6 +569,70 @@ body{
 	padding: 5px;
 	border-radius: 5px;
 }
+
+.auction-detail {
+	background-color: #fff;
+	color: black;
+	padding: 20px 0;
+	border-radius: 10px;
+}
+/* 
+#detail-1 {
+	display: block;
+}
+
+#detail-2 {
+	display: block;
+}
+
+#detail-3 {
+	display: block;
+} */
+
+.auctions .arrow-up {
+  width: 0; 
+  height: 0; 
+  position: absolute;
+  top: -30px;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid #fff;
+}
+
+.auctions .arrow-left {
+  left: 155px;
+}
+
+.auctions .arrow-center {
+  left: 555px;
+}
+
+.auctions .arrow-right {
+  right: 170px;
+}
+
+.auction-informations {
+	text-align: left;
+}
+
+.auctions ul{
+	margin-top: 2px;
+	padding-left:0px;
+	display: inline-block;
+	margin:0 auto;
+}
+.auctions ul li{
+	padding:5px 10px;
+	list-style:none;
+	font-size: 20px;
+}
+
+.auctions .quotes {
+	text-align: left;
+	font-size: 20px;
+	padding: 30px;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*	PROJECTS
 /*-----------------------------------------------------------------------------------*/

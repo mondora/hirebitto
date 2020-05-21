@@ -78,8 +78,8 @@
                   <ul id="menu">
                     <li><a href="#about">About</a></li>
                     <li><a href="#rules">Rules</a></li>
-                    <li><a href="#auctions">Auctions</a></li>
                     <li><a href="#video">Video</a></li>
+                    <li><a href="#auctions">Auctions</a></li>
                     <li><a href="#project">Just Hired</a></li>
                     <li class="last"><a href="#contact">Contact</a></li>
                   </ul>
@@ -141,7 +141,7 @@
     <!-- rules start -->
 
     <div>
-      <div class="line2">
+      <div class="rules line2">
         <div class="container">
           <div class="row rules" id="rules">
             <div class="col-xs-12"><h2>HireBitto Rules:</h2></div>
@@ -328,12 +328,12 @@
     <!-- auction start -->
 
     <div>
-      <div class="line2">
+      <div class="auctions line2">
         <div class="container">
           <div class="row auctions" id="auctions">
             <div class="col-xs-12"><h2>HireBitto auctions:</h2></div>
             <div class="col-xs-12 col-sm-6 col-md-4">
-              <div class="card">
+              <div class="card" id="card-1">
                 <h1>Filippo Scarinzi</h1>
                 <div>
                   <img
@@ -345,7 +345,7 @@
               </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-4">
-              <div class="card">
+              <div class="card" id="card-2">
                 <h1>Chiara Cismondi</h1>
                 <div>
                   <img
@@ -357,15 +357,87 @@
               </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-4">
-              <div class="card">
+              <div class="card" id="card-3">
                 <h1>Amedeo Zitti</h1>
                 <div>
                   <img
                     class="img-responsive picsGall"
                     src="images/prettyPhotoImages/thumb_pic5.jpg"
                     alt="Gallery"
-                />
+                  />
                 </div>
+              </div>
+            </div>
+            <div class="auction-detail col-xs-12 col-sm-12 col-md-12" id="detail-1" style="display: none">
+              <div class="arrow-up arrow-left"></div>
+              <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="col-md-3">
+                  <img
+                    class="img-responsive picsGall"
+                    src="images/prettyPhotoImages/thumb_pic39.jpg"
+                    alt="Gallery"
+                  />
+                </div>
+                <div class="auction-informations col-md-9">
+                  <ul>
+                  <li> Anno:</li>
+                  <li> Formaggio:</li>
+                  <li> Casaro:</li>
+                  <li> Ricavato:</li>
+                  <li> Prezzo:</li>
+                </ul>
+                </div>
+              </div>
+              <div class="quotes col-xs-12 col-sm-12 col-md-12">
+                "Io penso che....."
+              </div>
+            </div>
+            <div class="auction-detail col-xs-12 col-sm-12 col-md-12" id="detail-2" style="display: none">
+              <div class="arrow-up arrow-center"></div>
+              <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="col-md-3">
+                  <img
+                    class="img-responsive picsGall"
+                    src="images/prettyPhotoImages/thumb_pic9.jpg"
+                    alt="Gallery"
+                  />
+                </div>
+                <div class="auction-informations col-md-9">
+                  <ul>
+                  <li> Anno:</li>
+                  <li> Formaggio:</li>
+                  <li> Casaro:</li>
+                  <li> Ricavato:</li>
+                  <li> Prezzo:</li>
+                </ul>
+                </div>
+              </div>
+              <div class="quotes col-xs-12 col-sm-12 col-md-12">
+                "Io penso che....."
+              </div>
+            </div>
+            <div class="auction-detail col-xs-12 col-sm-12 col-md-12" id="detail-3" style="display: none">
+              <div class="arrow-up arrow-right"></div>
+              <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="col-md-3">
+                  <img
+                    class="img-responsive picsGall"
+                    src="images/prettyPhotoImages/thumb_pic5.jpg"
+                    alt="Gallery"
+                  />
+                </div>
+                <div class="auction-informations col-md-9">
+                  <ul>
+                  <li> Anno:</li>
+                  <li> Formaggio:</li>
+                  <li> Casaro:</li>
+                  <li> Ricavato:</li>
+                  <li> Prezzo:</li>
+                </ul>
+                </div>
+              </div>
+              <div class="quotes col-xs-12 col-sm-12 col-md-12">
+                "Io penso che....."
               </div>
             </div>
           </div>
@@ -1292,6 +1364,21 @@
             800
           );
           return false;
+        });
+        $("#card-1").click(function(){
+          $("#detail-1").toggle();
+          $("#detail-2").hide();
+          $("#detail-3").hide();
+        });
+        $("#card-2").click(function(){
+          $("#detail-2").toggle();
+          $("#detail-1").hide();
+          $("#detail-3").hide();
+        });
+        $("#card-3").click(function(){
+          $("#detail-3").toggle();
+          $("#detail-1").hide();
+          $("#detail-2").hide();
         });
       });
     </script>
