@@ -495,6 +495,7 @@ body{
 	overflow: hidden;
 	height:100%;
 	background-color: #FEDA17;
+	top: -150px;
 }
 .auctions.line2:after{
 	content: "";
@@ -575,7 +576,10 @@ body{
 	color: black;
 	padding: 20px 0;
 	border-radius: 10px;
+	transition: opacity 1s ease-in-out;
+	opacity: 0;
 }
+
 /* 
 #detail-1 {
 	display: block;
