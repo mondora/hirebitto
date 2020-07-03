@@ -635,37 +635,31 @@ body {
   color: black;
   padding: 20px 0;
   border-radius: 10px;
-  animation: appear 1s;
-  animation-fill-mode: reverse;
 }
 
 .auction-active {
   display: block;
-
-  animation: appear 1s;
-  animation-fill-mode: normal;
+  animation: appear 1s ease-out;
 }
+.auction-active .close-details {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
 @keyframes appear {
-  from {
+  0% {
+    display: none;
     opacity: 0;
   }
-  to {
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: block;
     opacity: 1;
   }
 }
-
-/* 
-#detail-1 {
-	display: block;
-}
-
-#detail-2 {
-	display: block;
-}
-
-#detail-3 {
-	display: block;
-} */
 
 @media screen and (min-width: 992px) {
   .auctions .arrow-up {

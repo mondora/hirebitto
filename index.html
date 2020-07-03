@@ -392,6 +392,13 @@
                     alt="Gallery"
                   />
                 </div>
+                <button
+                  type="button"
+                  class="close close-details"
+                  aria-label="Close"
+                >
+                  &times
+                </button>
                 <div class="auction-informations col-md-9">
                   <ul>
                     <li>Anno:</li>
@@ -420,6 +427,13 @@
                     alt="Gallery"
                   />
                 </div>
+                <button
+                  type="button"
+                  class="close close-details"
+                  aria-label="Close"
+                >
+                  &times
+                </button>
                 <div class="auction-informations col-md-9">
                   <ul>
                     <li>Anno:</li>
@@ -448,6 +462,13 @@
                     alt="Gallery"
                   />
                 </div>
+                <button
+                  type="button"
+                  class="close close-details"
+                  aria-label="Close"
+                >
+                  &times
+                </button>
                 <div class="auction-informations col-md-9">
                   <ul>
                     <li>Anno:</li>
@@ -1421,6 +1442,10 @@
         $("#card-3").click(function () {
           $(".auction-detail").removeClass("auction-active");
           $("#detail-3").addClass("auction-active");
+        });
+
+        $(".close-details").click(function () {
+          $(".auction-detail").removeClass("auction-active");
         });
       });
 
