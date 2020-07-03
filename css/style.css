@@ -635,12 +635,23 @@ body {
   color: black;
   padding: 20px 0;
   border-radius: 10px;
-  transition: opacity 1s ease-in-out;
-  opacity: 0;
+  animation: appear 1s;
+  animation-fill-mode: reverse;
 }
 
 .auction-active {
   display: block;
+
+  animation: appear 1s;
+  animation-fill-mode: normal;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* 

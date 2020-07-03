@@ -1411,46 +1411,16 @@
         });
 
         $("#card-1").click(function () {
+          $(".auction-detail").removeClass("auction-active");
           $("#detail-1").addClass("auction-active");
-          $("#detail-1").css({
-            opacity: "1",
-          });
-          $("#detail-2").removeClass("auction-active");
-          $("#detail-2").css({
-            opacity: "0",
-          });
-          $("#detail-3").removeClass("auction-active");
-          $("#detail-3").css({
-            opacity: "0",
-          });
         });
         $("#card-2").click(function () {
+          $(".auction-detail").removeClass("auction-active");
           $("#detail-2").addClass("auction-active");
-          $("#detail-2").css({
-            opacity: "1",
-          });
-          $("#detail-1").removeClass("auction-active");
-          $("#detail-1").css({
-            opacity: "0",
-          });
-          $("#detail-3").removeClass("auction-active");
-          $("#detail-3").css({
-            opacity: "0",
-          });
         });
         $("#card-3").click(function () {
+          $(".auction-detail").removeClass("auction-active");
           $("#detail-3").addClass("auction-active");
-          $("#detail-3").css({
-            opacity: "1",
-          });
-          $("#detail-1").removeClass("auction-active");
-          $("#detail-1").css({
-            opacity: "0",
-          });
-          $("#detail-2").removeClass("auction-active");
-          $("#detail-2").css({
-            opacity: "0",
-          });
         });
       });
 
