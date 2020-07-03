@@ -332,14 +332,17 @@
         <div class="col-md-12 aboutus">
           <h3>About Auctions</h3>
           <p>
-            We decided that the auctions are going to be made through this channel.....
+            We decided that the auctions are going to be made through this
+            channel.....
           </p>
         </div>
       </div>
+
       <div class="auctions line2">
         <div class="container">
           <div class="row auctions" id="auctions">
             <div class="col-xs-12"><h2>Now at auction:</h2></div>
+
             <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="card" id="card-1">
                 <h1>Filippo Scarinzi</h1>
@@ -352,6 +355,7 @@
                 </div>
               </div>
             </div>
+
             <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="card" id="card-2">
                 <h1>Chiara Cismondi</h1>
@@ -364,6 +368,7 @@
                 </div>
               </div>
             </div>
+
             <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="card" id="card-3">
                 <h1>Amedeo Zitti</h1>
@@ -376,11 +381,8 @@
                 </div>
               </div>
             </div>
-            <div
-              class="auction-detail col-xs-12 col-sm-12 col-md-12"
-              id="detail-1"
-              style="display: none;"
-            >
+
+            <div class="auction-detail col-xs-12" id="detail-1">
               <div class="arrow-up arrow-left"></div>
               <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="col-md-3">
@@ -400,14 +402,14 @@
                   </ul>
                 </div>
               </div>
-              <div class="quotes col-xs-12 col-sm-12 col-md-12">
+              <div class="quotes col-xs-12">
                 "Io penso che....."
               </div>
             </div>
+
             <div
               class="auction-detail col-xs-12 col-sm-12 col-md-12"
               id="detail-2"
-              style="display: none;"
             >
               <div class="arrow-up arrow-center"></div>
               <div class="col-xs-12 col-sm-12 col-md-12">
@@ -432,10 +434,10 @@
                 "Io penso che....."
               </div>
             </div>
+
             <div
               class="auction-detail col-xs-12 col-sm-12 col-md-12"
               id="detail-3"
-              style="display: none;"
             >
               <div class="arrow-up arrow-right"></div>
               <div class="col-xs-12 col-sm-12 col-md-12">
@@ -1407,47 +1409,65 @@
           );
           return false;
         });
+
         $("#card-1").click(function () {
-          $("#detail-1").toggle();
+          $("#detail-1").addClass("auction-active");
           $("#detail-1").css({
-            "opacity": "1"
+            opacity: "1",
           });
-          $("#detail-2").hide();
+          $("#detail-2").removeClass("auction-active");
           $("#detail-2").css({
-            "opacity": "0"
+            opacity: "0",
           });
-          $("#detail-3").hide();
+          $("#detail-3").removeClass("auction-active");
           $("#detail-3").css({
-            "opacity": "0"
+            opacity: "0",
           });
         });
         $("#card-2").click(function () {
-          $("#detail-2").toggle();
+          $("#detail-2").addClass("auction-active");
           $("#detail-2").css({
-            "opacity": "1"
+            opacity: "1",
           });
-          $("#detail-1").hide();
+          $("#detail-1").removeClass("auction-active");
           $("#detail-1").css({
-            "opacity": "0"
+            opacity: "0",
           });
-          $("#detail-3").hide();
+          $("#detail-3").removeClass("auction-active");
           $("#detail-3").css({
-            "opacity": "0"
+            opacity: "0",
           });
         });
         $("#card-3").click(function () {
-          $("#detail-3").toggle();
+          $("#detail-3").addClass("auction-active");
           $("#detail-3").css({
-            "opacity": "1"
+            opacity: "1",
           });
-          $("#detail-1").hide();
+          $("#detail-1").removeClass("auction-active");
           $("#detail-1").css({
-            "opacity": "0"
+            opacity: "0",
           });
-          $("#detail-2").hide();
+          $("#detail-2").removeClass("auction-active");
           $("#detail-2").css({
-            "opacity": "0"
+            opacity: "0",
           });
+        });
+      });
+
+      $(function () {
+        $(".card").click(function (e) {
+          e.preventDefault();
+          var target =
+            $(window).width() <= 992
+              ? $(".auction-active").offset().top - 50
+              : $(".card").offset().top - 160;
+          $("html, body").animate(
+            {
+              scrollTop: target,
+            },
+            100
+          );
+          return false;
         });
       });
     </script>
