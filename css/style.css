@@ -628,6 +628,11 @@ body {
   padding: 5px;
   border-radius: 5px;
 }
+.auctions .card:hover {
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+  box-shadow: 4px 4px 8px rgba(255, 255, 255, 7);
+}
 
 .auction-detail {
   display: none;
