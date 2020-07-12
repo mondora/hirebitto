@@ -69,6 +69,17 @@ html {
 body {
   font-family: "Roboto", "sans-serif";
 }
+a,
+a:hover,
+a:focus,
+a:active,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #fff;
+  outline: none;
+  border: none;
+}
 .fixed {
   z-index: 999;
   position: fixed;
@@ -77,35 +88,10 @@ body {
   width: 100%;
   background-color: #101010 !important;
 }
-
-.headerLine {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  height: 100%;
-  background: url(../images/bgTop.jpg) center center no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-.headerLine:after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  pointer-events: none;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  border-bottom: 150px solid white;
-  border-left: 3000px solid transparent;
-}
 .logo {
+  display: block;
   margin-top: 50px;
+  cursor: pointer;
 }
 .logo img {
   max-height: 45px;
@@ -119,39 +105,13 @@ body {
   font-family: "Cabin Sketch", cursive;
   font-weight: 700;
   text-transform: uppercase;
-  color: #fff;
 }
-.logo a {
-  cursor: pointer;
-  color: #fff;
-  text-decoration: none;
-}
-#menu a:active {
-  color: #feda17;
-}
-#menu select {
-  display: none;
-}
-
-#menu .active a {
+#menu .active a,
+#menu a:active,
+#menu li a:hover {
   border: 0;
+  outline: none;
   color: #feda17;
-}
-#menu .active a:focus {
-  outline: none;
-  border: none;
-}
-#menu .active a:active {
-  outline: none;
-  border: none;
-}
-#menu .active a:link {
-  outline: none;
-  border: none;
-}
-#menu .active a:visited {
-  outline: none;
-  border: none;
 }
 #menu li {
   -moz-osx-font-smoothing: grayscale;
@@ -162,7 +122,6 @@ body {
   float: left;
   font-family: "Roboto", "sans-serif";
   font-size: 18px;
-  color: #fff;
   list-style: none;
   text-transform: uppercase;
   font-weight: 700;
@@ -174,15 +133,6 @@ body {
 #menu {
   margin-top: 74px;
   float: right;
-}
-#menu li a {
-  color: #fff;
-  text-decoration: none;
-}
-#menu li a:hover {
-  border: none;
-  outline: none;
-  color: #feda17;
 }
 .project {
   height: 500px;
@@ -203,9 +153,7 @@ body {
   display: none;
 }
 @media screen and (max-width: 991px) {
-  #menu {
-    display: none;
-  }
+  #menu,
   #menuF {
     display: none !important;
   }
@@ -228,41 +176,26 @@ body {
     font-family: "Cabin Sketch", cursive;
     font-size: 30px;
     height: 20px;
-  }
-  .slicknav_menu:before {
     background-size: contain;
     margin-top: 0px;
-  }
-}
-@media screen and (min-width: 991px) {
-  .camera_caption h2 {
-    font-size: 100px;
-  }
-}
-@media screen and (max-width: 460px) {
-  .camera_caption h2 {
-    font-size: 65px;
-  }
-  .aboutus h3 {
-    text-align: center;
-    margin-top: 73px !important;
-  }
-  .aboutus p {
-    margin-top: 30px !important;
-    text-align: center;
-  }
-  .Ama {
-    margin-top: 100px !important;
-    margin-bottom: 100px !important;
-  }
-  .soc ul li {
-    margin-bottom: 20px;
   }
 }
 
 /*-----------------------------------------------------------------------------------*/
 /*	LAYOUT
 /*-----------------------------------------------------------------------------------*/
+
+.headerLine {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  background: url(../images/bgTop.jpg) center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 .line2 {
   position: relative;
@@ -286,7 +219,8 @@ body {
 }
 
 .line2:after,
-.line3:after {
+.line3:after,
+.headerLine:after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -294,9 +228,14 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   border-bottom: 150px solid white;
   border-left: 3000px solid transparent;
 }
+
 .line2:before,
 .line3:before {
   top: 0;
@@ -319,6 +258,29 @@ body {
 /*-----------------------------------------------------------------------------------*/
 /*	ABOUT
 /*-----------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 991px) {
+  .camera_caption h2 {
+    font-size: 100px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .camera_caption h2 {
+    font-size: 65px;
+  }
+  .aboutus h3 {
+    text-align: center;
+    margin-top: 73px !important;
+  }
+  .aboutus p {
+    margin-top: 30px !important;
+    text-align: center;
+  }
+  .soc ul li {
+    margin-bottom: 20px;
+  }
+}
+
 .aboutus {
   margin-top: 32px;
   text-align: center;
@@ -339,7 +301,6 @@ body {
   margin-top: 12px;
   margin-bottom: 0;
 }
-/**/
 .centPic {
   margin-top: 57px;
   text-align: center;
@@ -357,14 +318,8 @@ body {
   .aboutus p {
     font-size: 16px;
   }
-  .centPic {
-    margin-bottom: -140px;
-  }
 }
 @media screen and (max-width: 480px) {
-  .centPic {
-    margin-bottom: -160px;
-  }
   .centPic img {
     max-width: 100%;
   }
@@ -402,31 +357,26 @@ body {
 /*-----------------------------------------------------------------------------------*/
 /*	RULES
 /*-----------------------------------------------------------------------------------*/
-
 .rules {
   margin-bottom: 145px;
-  color: #fff;
   margin-top: 200px;
   text-align: center;
+  color: #fff;
 }
 .rules > div {
   min-height: auto;
   margin-top: 30px;
 }
 .rules h2 {
-  width: auto;
   height: 100px;
   line-height: 80px;
   font-size: 64px;
-  color: #fff;
   margin: 0;
   font-family: "Cabin Sketch", cursive;
 }
 .rules h3 {
-  width: auto;
   line-height: 40px;
   font-size: 46px;
-  color: #ffffff;
   font-family: "Cabin Sketch", cursive;
 }
 .rules h4 {
@@ -434,13 +384,12 @@ body {
   top: -40px;
   left: 50%;
   margin-left: -40px;
-  border: 3px solid #ffffff;
+  border: 3px solid #fff;
   border-radius: 100%;
   width: 80px;
   height: 80px;
   line-height: 80px;
   font-size: 60px;
-  color: #fff;
   background-color: #feda17;
   text-align: center;
   font-family: "Roboto", "sans-serif";
@@ -450,11 +399,11 @@ body {
   font-size: 16px;
   font-weight: 300;
   margin: 12px 0 30px 0;
+  padding: 50px 20px 20px;
   line-height: 30px;
   color: #222;
   background-color: #ffffff;
   height: 200px;
-  padding: 50px 20px 20px;
   border-radius: 10px;
 }
 @media screen and (max-width: 767px) {
@@ -484,33 +433,25 @@ body {
 .video {
   margin-top: 50px;
   text-align: left;
-}
-.video img {
-  border-radius: 3px;
+  font-family: "Roboto", "sans-serif";
 }
 .video h3 {
   color: #2f2f2f;
   font-size: 22px;
-  font-family: "Roboto", "sans-serif";
   font-weight: 400;
-  text-align: left;
 }
 .video p {
   line-height: 23px;
   color: #666666;
   font-size: 16px;
-  font-family: "Roboto", "sans-serif";
   font-weight: 300;
-  text-align: left;
 }
 .video .date {
   margin: 14px 0px;
   padding-left: 0;
-  font-family: "Roboto", "sans-serif";
   font-weight: 300;
   color: #a9a9a9;
   font-size: 16px;
-  text-align: left;
 }
 .video .date i {
   padding-right: 5px;
@@ -535,9 +476,7 @@ body {
 }
 
 @media screen and (max-width: 992px) {
-  .video {
-    text-align: center;
-  }
+  .video,
   .video h3,
   .video p,
   .video .date {
@@ -546,10 +485,6 @@ body {
   .video hr {
     display: block;
   }
-  .video .info-wrp {
-    height: auto;
-    margin-bottom: 20px;
-  }
 }
 @media screen and (min-width: 992px) {
   .video hr {
@@ -557,8 +492,8 @@ body {
   }
   .video .info-wrp {
     overflow: hidden;
-    height: 160px;
-    margin-bottom: 30px;
+    height: 240px;
+    margin-bottom: 8px;
   }
 }
 /*-----------------------------------------------------------------------------------*/
@@ -574,7 +509,6 @@ body {
   min-height: auto;
   margin: 30px auto;
 }
-
 .auctions h1 {
   position: absolute;
   top: -38px;
@@ -590,7 +524,6 @@ body {
   font-family: "Roboto", "sans-serif";
   margin-left: 25px;
 }
-
 .auctions h2 {
   width: auto;
   height: 100px;
@@ -600,7 +533,6 @@ body {
   margin: 0;
   font-family: "Cabin Sketch", cursive;
 }
-
 .auctions .card {
   margin: 0 auto;
   background-color: #fff;
@@ -613,7 +545,6 @@ body {
   transition: opacity 0.2s ease;
   box-shadow: 4px 4px 8px rgba(255, 255, 255, 7);
 }
-
 .auction-detail {
   display: none;
   background-color: #fff;
@@ -626,7 +557,6 @@ body {
     border-radius: 0;
   }
 }
-
 .auction-active {
   display: block;
   animation: appear 1s ease-out;
@@ -637,7 +567,6 @@ body {
   font-size: 24px;
   margin-right: 8px;
 }
-
 @keyframes appear {
   0% {
     display: none;
@@ -652,7 +581,6 @@ body {
     opacity: 1;
   }
 }
-
 @media screen and (min-width: 992px) {
   .auctions .arrow-up {
     width: 0;
@@ -664,11 +592,9 @@ body {
     border-bottom: 30px solid #fff;
   }
 }
-
 .auctions .arrow-left {
   left: 155px;
 }
-
 .auctions .arrow-center {
   left: 555px;
 }
