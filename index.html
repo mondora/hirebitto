@@ -344,7 +344,7 @@
             <div class="col-xs-12"><h2>Now at auction:</h2></div>
 
             <div class="col-xs-12 col-sm-6 col-md-4">
-              <div class="card" id="card-1">
+              <div class="card" target="#detail-1">
                 <h1>Filippo Scarinzi</h1>
                 <div>
                   <img
@@ -357,7 +357,7 @@
             </div>
 
             <div class="col-xs-12 col-sm-6 col-md-4">
-              <div class="card" id="card-2">
+              <div class="card" target="#detail-2">
                 <h1>Chiara Cismondi</h1>
                 <div>
                   <img
@@ -370,7 +370,7 @@
             </div>
 
             <div class="col-xs-12 col-sm-6 col-md-4">
-              <div class="card" id="card-3">
+              <div class="card" target="#detail-3">
                 <h1>Amedeo Zitti</h1>
                 <div>
                   <img
@@ -1431,26 +1431,9 @@
           return false;
         });
 
-        $("#card-1").click(function () {
+        $(".close-details, .card").click(function (e) {
           $(".auction-detail").removeClass("auction-active");
-          $("#detail-1").addClass("auction-active");
-        });
-        $("#card-2").click(function () {
-          $(".auction-detail").removeClass("auction-active");
-          $("#detail-2").addClass("auction-active");
-        });
-        $("#card-3").click(function () {
-          $(".auction-detail").removeClass("auction-active");
-          $("#detail-3").addClass("auction-active");
-        });
-
-        $(".close-details").click(function () {
-          $(".auction-detail").removeClass("auction-active");
-        });
-      });
-
-      $(function () {
-        $(".card").click(function (e) {
+          $($(e.currentTarget).attr("target")).addClass("auction-active");
           e.preventDefault();
           var target =
             $(window).width() <= 992
@@ -1466,6 +1449,7 @@
         });
       });
     </script>
+    
     <script type="text/javascript" charset="utf-8">
       jQuery(document).ready(function () {
         jQuery(".pretty a[rel^='prettyPhoto']").prettyPhoto({
