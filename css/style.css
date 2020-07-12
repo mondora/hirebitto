@@ -69,11 +69,7 @@ html {
 body {
   font-family: "Roboto", "sans-serif";
 }
-.default {
-  transition-duration: 1s;
-}
 .fixed {
-  transition-duration: 1s;
   z-index: 999;
   position: fixed;
   top: -65px;

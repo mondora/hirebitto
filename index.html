@@ -64,7 +64,7 @@
     <!-- home start -->
     <div id="home">
       <div class="headerLine">
-        <div id="menuF" class="default">
+        <div id="menuF">
           <div class="container-fluid">
             <div class="row">
               <div class="logo col-md-4">
@@ -1365,21 +1365,14 @@
     <script type="text/javascript">
       $(document).ready(function () {
         var $menu = $("#menuF");
-
         $(window).scroll(function () {
-          if ($(this).scrollTop() > 100 && $menu.hasClass("default")) {
-            $menu.fadeOut("fast", function () {
-              $(this)
-                .removeClass("default")
-                .addClass("fixed transbg")
-                .fadeIn("fast");
+          if ($(this).scrollTop() > 100 && !$menu.hasClass("fixed")) {
+            $menu.fadeOut(800, function () {
+              $(this).addClass("fixed").fadeIn(800);
             });
-          } else if ($(this).scrollTop() <= 100 && $menu.hasClass("fixed")) {
-            $menu.fadeOut("fast", function () {
-              $(this)
-                .removeClass("fixed transbg")
-                .addClass("default")
-                .fadeIn("fast");
+          } else if ($(this).scrollTop() <= 100) {
+            $menu.fadeOut(800, function () {
+              $(this).removeClass("fixed").fadeIn(800);
             });
           }
         });
