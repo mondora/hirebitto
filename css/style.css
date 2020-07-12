@@ -74,7 +74,6 @@ body {
 }
 .fixed {
   transition-duration: 1s;
-  /*text-align:center;*/
   z-index: 999;
   position: fixed;
   top: -65px;
@@ -264,6 +263,63 @@ body {
     margin-bottom: 20px;
   }
 }
+
+/*-----------------------------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------------------------*/
+
+.line2 {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  background-color: #feda17;
+}
+
+.line3 {
+  top: -50px !important;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  background: url(../images/bgTop.jpg) center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.line2:after,
+.line3:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 150px solid white;
+  border-left: 3000px solid transparent;
+}
+.line2:before,
+.line3:before {
+  top: 0;
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-top: 190px solid white;
+  border-right: 3000px solid transparent;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*	ABOUT
 /*-----------------------------------------------------------------------------------*/
@@ -350,41 +406,7 @@ body {
 /*-----------------------------------------------------------------------------------*/
 /*	RULES
 /*-----------------------------------------------------------------------------------*/
-.rules.line2 {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  height: 100%;
-  background-color: #feda17;
-}
-.rules.line2:after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  pointer-events: none;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  border-bottom: 150px solid white;
-  border-left: 3000px solid transparent;
-}
-.rules.line2:before {
-  top: 0;
-  display: block;
-  content: "";
-  position: absolute;
-  z-index: 1;
-  pointer-events: none;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  border-top: 190px solid white;
-  border-right: 3000px solid transparent;
-}
+
 .rules {
   margin-bottom: 145px;
   color: #fff;
@@ -546,53 +568,15 @@ body {
 /*-----------------------------------------------------------------------------------*/
 /*	AUCTIONS
 /*-----------------------------------------------------------------------------------*/
-.auctions.line2 {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  height: 100%;
-  background-color: #feda17;
-  top: -150px;
-}
-.auctions.line2:after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  pointer-events: none;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  border-bottom: 150px solid white;
-  border-left: 3000px solid transparent;
-}
-.auctions.line2:before {
-  top: 0;
-  display: block;
-  content: "";
-  position: absolute;
-  z-index: 1;
-  pointer-events: none;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  border-top: 190px solid white;
-  border-right: 3000px solid transparent;
-}
-
 .auctions {
+  margin-top: 150px;
   margin-bottom: 145px;
   color: #fff;
-  margin-top: 150px;
   text-align: center;
 }
 .auctions > div {
   min-height: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 30px auto;
 }
 
 .auctions h1 {
@@ -641,12 +625,19 @@ body {
   padding: 20px 0;
   border-radius: 10px;
 }
+@media screen and (max-width: 767px) {
+  .auction-detail {
+    border-radius: 0;
+  }
+}
 
 .auction-active {
   display: block;
   animation: appear 1s ease-out;
 }
 .auction-active .close-details {
+  position: relative;
+  z-index: 2;
   font-size: 24px;
   margin-right: 8px;
 }
@@ -690,8 +681,10 @@ body {
   right: 170px;
 }
 
-.auction-informations {
-  text-align: left;
+.picsAuctions {
+  max-width: 100%;
+  height: auto;
+  border-radius: 3px;
 }
 
 .auctions ul {
@@ -712,60 +705,9 @@ body {
   padding: 30px;
 }
 
-.picsAuctions {
-  max-width: 100%;
-  height: auto;
-  border-radius: 3px;
-}
-
 /*-----------------------------------------------------------------------------------*/
 /*	PROJECTS
 /*-----------------------------------------------------------------------------------*/
-.line3 {
-  top: -50px !important;
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  height: 100%;
-  background: url(../images/bgTop.jpg) center center no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-.line3:after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  pointer-events: none;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  border-bottom: 150px solid white;
-  border-left: 3000px solid transparent;
-}
-.line3:before {
-  top: 0;
-  display: block;
-  content: "";
-  position: absolute;
-  z-index: 1;
-  pointer-events: none;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  border-top: 150px solid white;
-  border-right: 3000px solid transparent;
-}
-/**/
 .portfolio_block ul {
   margin-top: 2px;
   padding-left: 0px;
