@@ -524,6 +524,18 @@ a:visited {
   font-family: "Roboto", "sans-serif";
   margin-left: 25px;
 }
+@media screen and (min-width: 992px) and (max-width: 1230px) {
+.auctions h1{
+  width: 260px;
+  margin-left: 10px;
+}
+}
+@media screen and (max-width: 992px) and (min-width: 767px) {
+  .auctions h1{
+    width: 264px;
+    margin-left: 35px;
+  }
+  }
 .auctions h2 {
   width: auto;
   height: 100px;
